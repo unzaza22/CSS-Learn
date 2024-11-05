@@ -1,0 +1,184 @@
+เมื่อเว็บบราวเซอร์อ่านโค้ด CSS มันจะจัดรูปแบบการแสดงผลของ HTML ตามที่เราได้เขียนเอาไว้
+
+3 วิธีในการใส่ CSS
+มีอยู่ 3 วิธีในการใส่โค้ด CSS ลงในหน้าเว็บ
+External CSS
+Internal CSS
+Inline CSS
+
+External CSS
+การใช้ External CSS นั้นจะทำให้เราสามารถแก้ไขหน้าตาของเว็บไซต์ทั้งเว็บไซต์ด้วยการแก้โค้ดแค่ไฟล์เดียว
+แต่ทุกหน้าเว็บจะต้องใส่โค้ดเพื่ออ้างอิง External CSS ใน tag <link> ในส่วนของ head ด้วยเสมอ
+ตัวอย่าง
+ในที่นี้ External CSS ระบุอยู่ใน <link> ในส่วนของ <head> ของหน้าเว็บ
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+External CSS สามารถเขียนด้วย Text Editor ทุกชนิดและจะต้องบันทึกด้วยนามสกุล .css เท่านั้น
+External CSS ควรจะมีแต่โค้ด CSS ไม่ควรมีโค้ด HTML ผสมอยู่
+และนี่คือหน้าตาของโค้ดใน mystyle.css
+mystyle.css
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+ห้ามเว้นวรรคระหว่างค่าและหน่วยของ Property (เช่น margin-left: 20 px;) วิธีการที่ถูกต้องคือ margin-left: 20px;
+
+Internal CSS
+Internal CSS มักใช้ในกรณีที่เราต้องการระบุรูปแบบการแสดงผลเฉพาะหน้าเว็บหน้าเดียว
+Internal CSS ให้ระบุภายใน tag <style> ในส่วนของ head
+ตัวอย่าง
+ในที่นี้ External CSS ระบุอยู่ใน <link> ในส่วนของ <head> ของหน้าเว็บ
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+} 
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
+
+Inline CSS
+Inline CSS มักใช้ในกรณีที่เราต้องการระบุรูปแบบการแสดงผลเฉพาะ element อันใดอันหนึ่ง
+Inline CSS จะเขียนอยู่ใน attribute style ของ element นั้นๆ
+ภายใน attribute style เราสามารถเขียน property ลงไปได้เลย
+ตัวอย่าง
+ในที่นี้ Inline CSS ระบุอยู่ใน style ของ element นั้นๆ
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:blue;text-align:center;">This is a heading</h1>
+<p style="color:red;">This is a paragraph.</p>
+
+</body>
+</html>
+การเขียนด้วย Inline CSS ทำให้เราดึงศักยภาพของ CSS มาใช้ได้ไม่เต็มที่ ฟังก์ชั่นหลายอย่างไม่สามารถใช้ได้ เช่น การเช็คสถานะ การเช็คความกว้างหน้าจอ เพื่อปรับการแสดงผล ฯลฯ เป็นต้น
+
+Multiple Style Sheets
+ในบางครั้งเราอาจมีระบุ CSS ซ้อนกันหลายครั้งใน element เดียวกัน โค้ดที่ระบุล่าสุดจะถูกนำมาใช้
+ในที่นี้ external css ระบุการแสดงผลของ h1 ไว้ดังนี้
+h1 {
+  color: navy;
+}
+ต่อมาใน internal css ระบุการแสดงผลของ h1 ไว้ดังนี้
+h1 {
+  color: orange;
+}
+ตัวอย่าง
+ถ้า internal CSS ถูกระบุภายหลังจากโค้ด link ของ external CSS กรณีนี้ <h1> จะมีสีส้ม
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<style>
+h1 {
+  color: orange;
+}
+</style>
+</head>
+
+
+การใส่ CSS ในหน้าเว็บ
+เมื่อเว็บบราวเซอร์อ่านโค้ด CSS มันจะจัดรูปแบบการแสดงผลของ HTML ตามที่เราได้เขียนเอาไว้
+
+3 วิธีในการใส่ CSS
+มีอยู่ 3 วิธีในการใส่โค้ด CSS ลงในหน้าเว็บ
+
+External CSS
+Internal CSS
+Inline CSS
+External CSS
+การใช้ External CSS นั้นจะทำให้เราสามารถแก้ไขหน้าตาของเว็บไซต์ทั้งเว็บไซต์ด้วยการแก้โค้ดแค่ไฟล์เดียว
+
+แต่ทุกหน้าเว็บจะต้องใส่โค้ดเพื่ออ้างอิง External CSS ใน tag <link> ในส่วนของ head ด้วยเสมอ
+
+
+ตัวอย่าง
+ในที่นี้ External CSS ระบุอยู่ใน <link> ในส่วนของ <head> ของหน้าเว็บ
+
+
+
+External CSS สามารถเขียนด้วย Text Editor ทุกชนิดและจะต้องบันทึกด้วยนามสกุล .css เท่านั้น
+
+External CSS ควรจะมีแต่โค้ด CSS ไม่ควรมีโค้ด HTML ผสมอยู่
+
+และนี่คือหน้าตาของโค้ดใน mystyle.css
+
+
+mystyle.css
+
+ห้ามเว้นวรรคระหว่างค่าและหน่วยของ Property (เช่น margin-left: 20 px;) วิธีการที่ถูกต้องคือ margin-left: 20px;
+Internal CSS
+Internal CSS มักใช้ในกรณีที่เราต้องการระบุรูปแบบการแสดงผลเฉพาะหน้าเว็บหน้าเดียว
+
+Internal CSS ให้ระบุภายใน tag <style> ในส่วนของ head
+
+
+ตัวอย่าง
+ในที่นี้ External CSS ระบุอยู่ใน <link> ในส่วนของ <head> ของหน้าเว็บ
+
+
+
+Inline CSS
+Inline CSS มักใช้ในกรณีที่เราต้องการระบุรูปแบบการแสดงผลเฉพาะ element อันใดอันหนึ่ง
+
+Inline CSS จะเขียนอยู่ใน attribute style ของ element นั้นๆ
+
+ภายใน attribute style เราสามารถเขียน property ลงไปได้เลย
+
+
+ตัวอย่าง
+ในที่นี้ Inline CSS ระบุอยู่ใน style ของ element นั้นๆ
+
+
+
+การเขียนด้วย Inline CSS ทำให้เราดึงศักยภาพของ CSS มาใช้ได้ไม่เต็มที่ ฟังก์ชั่นหลายอย่างไม่สามารถใช้ได้ เช่น การเช็คสถานะ การเช็คความกว้างหน้าจอ เพื่อปรับการแสดงผล ฯลฯ เป็นต้น
+Multiple Style Sheets
+ในบางครั้งเราอาจมีระบุ CSS ซ้อนกันหลายครั้งใน element เดียวกัน โค้ดที่ระบุล่าสุดจะถูกนำมาใช้
+
+
+ในที่นี้ external css ระบุการแสดงผลของ h1 ไว้ดังนี้
+
+
+
+ต่อมาใน internal css ระบุการแสดงผลของ h1 ไว้ดังนี้
+
+
+
+ตัวอย่าง
+ถ้า internal CSS ถูกระบุภายหลังจากโค้ด link ของ external CSS กรณีนี้ <h1> จะมีสีส้ม
+
+
+
+การเรียงลำดับการแสดงผล
+จะเป็นอย่างไรหากเราระบุ CSS ของ element เดียวกันซ้อนกันหลายอัน
+รูปแบบการแสดงผลนั้นจะเรียงลำดับตามความสำคัญดังต่อไปนี้ (ลำดับที่ 1 สำคัญที่สุด)
+Inline CSS (ภายใน HTML element)
+External CSS และ Internal CSS (ภายในส่วนของ head และบรรทัดไหนท้ายสุดสำคัญกว่าบรรทัดก่อนหน้าเสมอ)
+ค่าเริ่มต้นของเว็บบราวเซอร์
+ดังนั้นค่า CSS ใน Inline CSS มีความสำคัญที่สุด จะทับค่าของ CSS อื่นทั้งหมดเสมอ
