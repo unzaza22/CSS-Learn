@@ -1,0 +1,16 @@
+เว็บเรามีตัวอย่างทุกหัวข้อ
+บทเรียน CSS นี้มีตัวอย่างให้ดูทุกหัวข้อ
+ด้วย Editor Online ของเรา คุณสามารถลองแก้ไขโค้ดได้เลยบนเบราว์เซอร์ ของคุณ แล้วคลิก Run เพื่อแสดงผลการทดสอบ
+ตัวอย่าง
+body {
+  background-color: white;
+}
+h1 {
+  color: blue;
+  text-align: left;
+}
+p {
+  font-family: verdana;
+  font-size: 16px;
+}
+
