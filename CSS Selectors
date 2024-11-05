@@ -1,0 +1,97 @@
+CSS Selector ใช้ในการหาหรือเลือก HTML Element ที่เราต้องการกำหนดคุณสมบัติ
+เราสามารถแบ่ง CSS Selectors เป็น 5 ประเภท
+Selectors ทั่วไป คือการเลือก HTML element ตาม ชื่อ tag หรือ id หรือ class
+Combination selectors คือการเลือกโดยระบุเจาะจงเฉพาะ element ที่มีความสัมพันธ์กับ element อื่นๆ
+Pseudo-class selectors คือการเลือก element ตามสถานะของ element นั้นๆ
+Pseudo-element selectors คือการเลือก element เฉพาะบางส่วนของ element นั้นเท่านั้น
+Attribute selectors คือการเลือก element ตาม Attribute ที่กำหนด
+ในบทนี้ส่วนใหญ่เราจะเน้นอธิบาย CSS Selectors แบบทั่วๆ ไปก่อน
+
+the CSS element Selector
+The element selector คือ Selector ใช้ในการเลือก HTML element ตามชื่อ tag ของ element นั้นๆ
+ตัวอย่าง
+ในที่นี้ <p> ทั้งหมดในหน้าเว็บจะจัดเรียงตัวอักษรอยู่ตรงกลางและมีสีตัวอักษรเป็นสีแดง
+p {
+  text-align: center;
+  color: red;
+}
+
+the CSS id Selector
+The id selector คือ Selector ใช้ในการเลือก HTML element ตามชื่อ attribute id ของ element นั้นๆ
+ซึ่ง id ของแต่ละ element ในหน้าเว็บหนึ่ง จะต้องไม่ซ้ำกัน ดังนั้น id selector จึงใช้ในการระบุเฉพาะเจาะจง element ตัวเดียวเท่านั้น
+ในการเลือก element ด้วย id เราจะใช้วิธีเขียนเครื่องหมาย hash (#) และตามด้วยชื่อ id ของ element นั้นๆ
+ตัวอย่าง
+ในที่นี้ <p> ทั้งหมดในหน้าเว็บจะจัดเรียงตัวอักษรอยู่ตรงกลางและมีสีตัวอักษรเป็นสีแดง
+#para1 {
+  text-align: center;
+  color: red;
+}
+หมายเหตุ ชื่อ id ไม่สามารถขึ้นต้นด้วยตัวเลขได้
+
+the CSS class Selector
+The id selector คือ Selector ใช้ในการเลือก HTML element ตามชื่อ attribute class ของ element นั้นๆ
+ซึ่งหลายๆ element สามารถมีชื่อ class ชื่อเดียวกันได้ และในทางกลับกันแต่ละ element สามารถมีหลายๆ class ได้เช่นเดียวกัน
+วิธีนี้จึงสามารถเลือก HTML element ได้หลายๆ element พร้อมๆ กัน และสามารถระบุ CSS ได้ซ้อนกันหลายชั้น
+ในการเลือก element ด้วย class เราจะใช้วิธีเขียนเครื่องหมาย period (.) และตามด้วยชื่อ class ของ element นั้นๆ
+ตัวอย่าง
+ในที่นี้ element ที่มี class="center" จะจัดเรียงอยู่ตรงกลางหน้าและมีตัวอักษรสีแดง
+.center {
+  text-align: center;
+  color: red;
+}
+เรายังสามารถระบุเจาะจงเฉพาะชื่อ element ที่มีชื่อ class ตามที่กำหนดเท่านั้นได้
+ตัวอย่าง
+ในที่นี้เฉพาะ element <p> ที่มี class="center" เท่านั้นจะจัดเรียงอยู่ตรงกลางหน้าและมีตัวอักษรสีแดง
+p.center {
+  text-align: center;
+  color: red;
+}
+แต่ละ element สามารถมี class ได้มากกว่าหนึ่ง
+ตัวอย่าง
+ในที่นี้ element <p> จะมีคุณสมบัติตาม class="center" และ class="large"
+<p class="center large">This paragraph refers to two classes.</p>
+หมายเหตุ ชื่อ class ไม่สามารถขึ้นต้นด้วยตัวเลขได้
+
+the CSS Universal Selector
+The universal selector คือการใช้เครื่องหมายดอกจันทร์ (*) เพื่อเลือก HTML element ทั้งหมดในหน้าเว็บ
+ตัวอย่าง
+ในที่นี้คุณสมบัติของ CSS จะถูกนำไปใช้ในทุก element บนหน้าเว็บ
+* {
+  text-align: center;
+  color: blue;
+}
+
+the CSS Grouping Selector
+The grouping selector คือเลือก element หลายตัวเราต้องการให้มีคุณสมบัติเหมือนกัน และระบุ CSS พร้อมกันทีเดียว
+ดังตัวอย่าง CSS code ของ h1 h2 และ p มีคุณสมบัติเหมือนกัน
+h1 {
+  text-align: center;
+  color: red;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+}
+
+p {
+  text-align: center;
+  color: red;
+}
+เราสามารถจับกลุ่มและระบุ CSS พร้อมกันทีเดียวได้
+ในการ grouping selector ให้ใช้เครื่องหมาย comma ในการแบ่งแต่ละ element
+h1,
+h2,
+p {
+  text-align: center;
+  color: red;
+}
+
+รวม CSS Selector ทั่วไป
+Selector	          ตัวอย่าง	    อธิบาย
+#id	                #firstname	เลือก element ที่มี id="firstname"
+.class	            .intro	    เลือก element ที่มี class="intro"
+element.class	      p.intro	    เลือกเฉพาะ <p> ที่มี class="intro"
+*	                  *	          เลือกทุก element
+element	            p	          เลือก element <p> ทั้งหมด
+element,element,..	div, p	    เลือก element <p> ทั้งหมด และ element <div> ทั้งหมด
